@@ -1,6 +1,6 @@
 {
 	"name": "node.cryptonight",
-	"version": "9.0.14",
+	"version": "9.0.15",
 	"main": "cryptonight-hashing",
 	"author": "anzerr",
 	"scripts": {
