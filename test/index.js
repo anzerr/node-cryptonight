@@ -4,7 +4,9 @@ const cp = require('child_process');
 const base = require('path').resolve(__dirname).replace(/\\/g, '/');
 
 const run = (test) => {
-	return new Promise((resolve) => cp.fork(`${base}/${test}`).on('error', console.log).on('exit', resolve));
+	return new Promise((resolve) => cp.fork(`${base}/${test}`).on('error', (err) => {
+		console.log(test, err);
+	}).on('exit', resolve));
 };
 
 let test = [
