@@ -3,7 +3,17 @@
 	"version": "9.0.13",
 	"main": "cryptonight-hashing",
 	"author": "anzerr",
+	"scripts": {
+		"test": "node test/index.js"
+	},
 	"license": "MIT",
+	"devDependencies": {
+		"eslint": "5.11.1",
+		"eslint-config-basic": "git+https://git@github.com/anzerr/eslintrc.git"
+	},
+	"eslintConfig": {
+		"extends": "eslint-config-basic"
+	},
 	"repository": {
 		"type": "git",
 		"url": "git@github.com:anzerr/node-cryptonight.git"
