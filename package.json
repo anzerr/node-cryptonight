@@ -1,5 +1,5 @@
 {
-	"name": "cryptonight-hashing",
+	"name": "node.cryptonight",
 	"version": "9.0.11",
 	"main": "cryptonight-hashing",
 	"author": "anzerr",
