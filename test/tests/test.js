@@ -5,7 +5,7 @@ let lineReader = require('readline');
 
 let hashes = {
 	CryptoNight: {
-		file: 'cryptonight.txt',
+		file: './test/tests/data/cryptonight.txt',
 		fileFormat: 'cn',
 		function: multiHashing.cryptonight
 	},

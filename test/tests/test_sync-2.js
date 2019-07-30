@@ -5,7 +5,7 @@ let lineReader = require('readline');
 
 let testsFailed = 0, testsPassed = 0;
 let lr = lineReader.createInterface({
-	input: fs.createReadStream('./data/cryptonight-2.txt')
+	input: fs.createReadStream('./test/tests/data/cryptonight-2.txt')
 });
 lr.on('line', (line) => {
 	let line_data = line.split(/ (.+)/);
@@ -24,3 +24,4 @@ lr.on('close', () => {
 		console.log(testsPassed + ' tests passed on: cryptonight-2');
 	}
 });
+lr.on('error', (err) => console.log('cryptonight2', err));

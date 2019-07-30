@@ -5,7 +5,7 @@ let lineReader = require('readline');
 
 let testsFailed = 0, testsPassed = 0;
 let lr = lineReader.createInterface({
-	input: fs.createReadStream('./data/cryptonight_heavy-tube.txt')
+	input: fs.createReadStream('./test/tests/data/cryptonight_heavy-tube.txt')
 });
 lr.on('line', (line) => {
 	let line_data = line.split(/ (.+)/);
@@ -24,3 +24,4 @@ lr.on('close', () => {
 		console.log(testsPassed + ' tests passed on: cryptonight_heavy-tube');
 	}
 });
+lr.on('error', (err) => console.log('cryptonight_heavy-tube', err));

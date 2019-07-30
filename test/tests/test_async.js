@@ -5,7 +5,7 @@ let lineReader = require('readline');
 
 let testsFailed = 0, testsPassed = 0, line_count = 0;
 let lr = lineReader.createInterface({
-	input: fs.createReadStream('./data/cryptonight-1.txt')
+	input: fs.createReadStream('./test/tests/data/cryptonight-1.txt')
 });
 lr.on('line', (line) => {
 	let line_data = line.split(/ (.+)/);
@@ -27,3 +27,4 @@ lr.on('line', (line) => {
 		}
 	});
 });
+lr.on('error', (err) => console.log('cryptonight_async', err));

@@ -51,7 +51,7 @@ let test = [
 let p = Promise.resolve();
 for (let i in test) {
 	((t) => {
-		p = p.then(() => run(t));
+		p = p.then(() => run(t)).then(() => console.log('done', t));
 	})(test[i]);
 }
 p.then(() => console.log('done'));
