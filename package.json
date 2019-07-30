@@ -1,6 +1,6 @@
 {
 	"name": "cryptonight-hashing",
-	"version": "9.0.5",
+	"version": "9.0.6",
 	"main": "cryptonight-hashing",
 	"author": "anzerr",
 	"license": "MIT",
